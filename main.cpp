@@ -30,8 +30,8 @@ void genPerms(std::vector<T>& path, std::size_t permLength) {
 }
 
 int main() {
-    //std::vector<char> v{'a', 'b', 'c', 'd'};
-    std::vector<std::size_t> v{0, 1, 2, 3};
+    std::vector<char> v{'a', 'b', 'c', 'd'};
+    //std::vector<std::size_t> v{0, 1, 2, 3};
     genPerms(v, 0);
     return 0;
 }
