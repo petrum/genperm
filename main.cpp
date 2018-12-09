@@ -10,11 +10,18 @@ void print(std::vector<T>& path) {
 }
 
 template <typename T>
-void genPerms(std::vector<T>& path, size_t permLength) {
+bool promising(const std::vector<T>& path, std::size_t permLength) {
+    return true;
+}
+
+template <typename T>
+void genPerms(std::vector<T>& path, std::size_t permLength) {
     if (path.size() == permLength) {
         print(path);
         return;
     }
+    if (!promising(path, permLength))
+        return;
     for (size_t i = permLength; i < path.size(); ++i) {
         std::swap(path[permLength], path[i]);
         genPerms(path, permLength + 1);
@@ -28,4 +35,3 @@ int main() {
     genPerms(v, 0);
     return 0;
 }
-
