@@ -23,8 +23,7 @@ void genPerms(std::vector<T>& path, size_t permLength) {
 }
 
 int main() {
-    std::string s = "abc";
-    std::vector<char> v(s.begin(), s.end());
+    std::vector<char> v{'a', 'b', 'c', 'd'};
     genPerms(v, 0);   
     return 0;
 }
