@@ -11,6 +11,8 @@ void print(std::vector<T>& path) {
 
 template <typename T>
 bool promising(const std::vector<T>& path, std::size_t permLength) {
+    if (permLength == 1 && path[0] != 0)
+        return false;
     return true;
 }
 
@@ -30,8 +32,8 @@ void genPerms(std::vector<T>& path, std::size_t permLength) {
 }
 
 int main() {
-    std::vector<char> v{'a', 'b', 'c', 'd'};
-    //std::vector<std::size_t> v{0, 1, 2, 3};
+    //std::vector<char> v{'a', 'b', 'c', 'd'};
+    std::vector<std::size_t> v{0, 1, 2, 3};
     genPerms(v, 0);
     return 0;
 }
